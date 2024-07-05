@@ -20,8 +20,3 @@ data "assert_test" "backend_key_check" {
   test  = can(regex(var.expected_state_key, local.backend_key))
   throw = "The backend key does not match the expected state key."
 }
-
-# Output the backend key for verification
-output "backend_key" {
-  value = local.backend_key
-}
